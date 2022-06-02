@@ -1,0 +1,68 @@
+@import '../variable.css';
+
+.monthly_header{
+    display: flex;
+    
+    height: 200px;
+}
+
+.months_btn_container{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 1fr 1fr;
+    width: 20%;
+    align-items: center;
+    justify-items: center;
+    padding: 40px 30px;
+}
+
+.months_btn{
+    background-color: #FFD24C;
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    border-radius: 8px;
+    font-size: 20px;
+    font-family: var(--font);
+}
+
+.months_btn span{
+    display: inline-block;
+    transform: skew(-20deg, 0);
+}
+
+.month{
+    width: 80%;
+    font-size: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font);
+    transform: skew(-10deg, 0);
+}
+
+.habbit_tracker{
+    width: 20%;
+    border: 5px solid #FFE69A;
+    margin: 20px 20px 0 0;
+}
+
+.habbit_tracker_header{
+    font-size: 20px;
+    text-align: center;
+    padding: 10px 0;
+    font-family: var(--font);
+}
+.habbit_tracker_itemContainer{
+    padding-left: 55px;
+}
+.habbit_tracker_item{
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-start;
+    font-size: 18px;
+    margin: 10px 0;
+}
+.habbit_tracker_item span{
+    margin-left: 18px;
+}

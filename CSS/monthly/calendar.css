@@ -1,0 +1,49 @@
+@import '../variable.css';
+
+.calendar{
+    background-color: beige;
+    margin: 50px var(--main--margin);
+    height: 75vh;
+    display: grid;
+    grid-template-rows: 0.5fr repeat(5, 1fr);
+    font-family: 'Permanent Marker', cursive;
+}
+
+.week{
+    display: grid;
+    grid-template-columns: 100px repeat(7, 1fr);
+    align-items: stretch;
+}
+.week_btn{
+    border: 3px solid rgba(0,0,0,0.5);
+    font-family: 'Permanent Marker', cursive;
+    font-size: 20px;
+    
+}
+
+.days{
+    border: 3px solid rgba(0,0,0,0.5);
+    border-left: none;
+    font-family: 'Permanent Marker', cursive;
+    position: relative;
+}
+
+.calendar .week:not(:first-of-type) button,.calendar .week:not(:first-of-type) .days{
+    border-top: none;
+}
+
+.week:first-child{
+    background-color: #92B4EC;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+.dayOfWeek{
+    font-size: 50px;
+}
+
+.day_num{
+    font-size: 25px;
+    position: absolute;
+    top:5px;
+    left: 8px;
+}
