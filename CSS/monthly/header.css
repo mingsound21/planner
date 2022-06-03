@@ -2,8 +2,7 @@
 
 .monthly_header{
     display: flex;
-    
-    height: 200px;
+    height: var(--header--height);
 }
 
 .months_btn_container{
@@ -13,7 +12,7 @@
     width: 20%;
     align-items: center;
     justify-items: center;
-    padding: 40px 30px;
+    padding: 10px 30px;
 }
 
 .months_btn{
@@ -38,7 +37,7 @@
     align-items: center;
     justify-content: center;
     font-family: var(--font);
-    transform: skew(-10deg, 0);
+    /* transform: skew(-10deg, 0); */
 }
 
 .habbit_tracker{

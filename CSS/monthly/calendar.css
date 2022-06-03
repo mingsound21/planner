@@ -1,9 +1,10 @@
 @import '../variable.css';
 
+
 .calendar{
     background-color: beige;
-    margin: 50px var(--main--margin);
-    height: 75vh;
+    margin: 35px var(--main--margin) 15px var(--main--margin);
+    height: 80vh;
     display: grid;
     grid-template-rows: 0.5fr repeat(5, 1fr);
     font-family: 'Permanent Marker', cursive;
@@ -17,9 +18,10 @@
 .week_btn{
     border: 3px solid rgba(0,0,0,0.5);
     font-family: 'Permanent Marker', cursive;
-    font-size: 20px;
-    
+    font-size: 40px;
 }
+
+
 
 .days{
     border: 3px solid rgba(0,0,0,0.5);
@@ -46,4 +48,17 @@
     position: absolute;
     top:5px;
     left: 8px;
+}
+
+.week:first-child .week_btn  {
+    font-size: 25px;
+    background-color: beige;
+}
+
+.week:not(:first-child) .week_btn{
+    background-color: #FFD24C;
+}
+
+.week:not(:first-child) .week_btn:hover{
+    cursor: pointer;
 }
