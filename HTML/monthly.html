@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="../CSS/reset.css">
     <link rel="stylesheet" href="../CSS/monthly/header.css">
     <link rel="stylesheet" href="../CSS/monthly/calendar.css">
-    
+    <link rel="stylesheet" href="../CSS/monthly/schedule.css">
+
     <!-- Icon -->
     <script src="https://kit.fontawesome.com/99cf562452.js" crossorigin="anonymous"></script>
 
@@ -18,6 +19,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&family=Noto+Serif+KR:wght@200;300;400;500;600;700&family=Permanent+Marker&family=Song+Myung&family=Yeon+Sung&display=swap" rel="stylesheet">
+
+    <!-- Date Range Picker-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
 </head>
 <body>
     <header class="monthly_header">
@@ -117,5 +124,21 @@
             <div class="days"><span class="day_num">1</span></div>
         </div>
     </main>
+    <section class="schedule_container">
+        <div class="schedule_bg schedule_bg_show"></div>
+        <div class="add_schedule_container schedule_show">
+            <label for="schedule_color">COLOR : </label>
+            <input type="color" id="schedule_color" value="#F7D716">
+    
+            <label for="schedule_date">DATE : </label>
+            <input type="text" name="daterange" value="" id="schedule_date">
+            
+            <label for="schedule">TO DO : </label>
+            <textarea placeholder="WRITE TO DO" name="schedule_text" id="schedule" cols="20" rows="40"></textarea>
+        
+            <button type="submit">Finish</button>
+        </div>
+    </section>
+   
 </body>
 </html>

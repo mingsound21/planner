@@ -1,0 +1,100 @@
+
+.schedule_bg{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: white;
+    transition: opacity 1s ease-in-out;
+}
+/* TODO: opacity add_schedule_container transition 잘 작동 안됨 
+schedule_show에서 opacity 0.5로하면 작동되긴함
+TODO: 날짜 클릭시 date에 시작 날짜로 해당 날짜 선택되도록
+TODO: schedule모두 작성한뒤에 enter 또는 submit 버튼 클릭시 스케줄 box랑 스케줄 bg 서서히 사라지도록
+*/
+.add_schedule_container{
+    background-color: #E3FCBF;
+    position: absolute;
+    top: 250px;
+    left: 500px;
+    width: 600px;
+    height: 600px;
+    display: grid;
+    grid-template-columns: 150px auto;
+    grid-template-rows: 60px 60px auto;
+    padding: 40px;
+    align-items: center;
+    border: 7px solid black;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+.schedule_bg_hidden{
+    z-index: -1;
+    opacity: 0;
+}
+.schedule_bg_show{
+    z-index: 1;
+    opacity: 0.9;
+}
+.schedule_hidden{
+    z-index: -1;
+    opacity: 0;
+}
+.schedule_show{
+    z-index: 1;
+    opacity: 1;
+}
+label[for = 'schedule_color']{
+    grid-column: 1/2;
+}
+
+label[for = 'schedule_date']{
+    grid-column: 1/2;
+}
+
+label[for = 'schedule']{
+    margin-top: 15px;
+    grid-column: 1/2;
+    align-self: start;
+}
+
+button[type = 'submit']{
+    grid-column: 2/3;
+    border: 5px solid black;
+    width: 150px;
+    margin: 30px 0 0 20px;
+    background-color: #FFB2A6;
+}
+.add_schedule_container label, button[type='submit']{
+    font-size: 35px;
+    font-family: 'Permanent Marker', cursive;
+}
+
+
+input[type = 'color']{
+    width: 100px;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+}
+
+input[id = 'schedule_date']{
+    width: 300px;
+    height: 35px;
+    font-size: 22px;
+    font-family: 'Permanent Marker', cursive;
+}
+
+textarea{
+    margin-top: 15px;
+    width: 350px;
+    height: 300px;
+    font-size: 30px;
+    font-family: 'Permanent Marker', cursive;
+    align-self: start;
+}
+
+.days:active{
+    background-color: pink;
+}
