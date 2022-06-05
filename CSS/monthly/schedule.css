@@ -1,4 +1,3 @@
-
 .schedule_bg{
     position: absolute;
     width: 100vw;
@@ -26,7 +25,6 @@ TODO: schedule모두 작성한뒤에 enter 또는 submit 버튼 클릭시 스케
     padding: 40px;
     align-items: center;
     border: 7px solid black;
-    opacity: 0;
     transition: opacity 1s ease-in-out;
 }
 .schedule_bg_hidden{
