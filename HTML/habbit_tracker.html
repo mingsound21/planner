@@ -8,7 +8,16 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="../CSS/reset.css">
-    
+    <link rel="stylesheet" href="../CSS/habbit_tracker/sideBar.css">
+    <link rel="stylesheet" href="../CSS/habbit_tracker/habbit_main.css">
+
+    <!-- JS -->
+    <script defer src="../JS/habbit_tracker/result_chart.js"></script>
+    <!-- Chart.js -->
+    <script
+src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+</script>
+
     <!-- Icon -->
     <script src="https://kit.fontawesome.com/99cf562452.js" crossorigin="anonymous"></script>
 
@@ -18,6 +27,126 @@
     <link href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&family=Noto+Serif+KR:wght@200;300;400;500;600;700&family=Permanent+Marker&family=Song+Myung&family=Yeon+Sung&display=swap" rel="stylesheet">
 </head>
 <body>
+    <section class="side_section">
+        <div class="year_choose">
+            <h2 class="year_title">YEAR</h2>
+            <input type="text" value="2022" id="year_input">
+        </div>
+
+        <div class="month_btn_container">
+            <h2 class="month_title">MONTH</h2>
+            <button class="monthBtn">1</button>
+            <button class="monthBtn">2</button>
+            <button class="monthBtn">3</button>
+            <button class="monthBtn">4</button>
+            <button class="monthBtn">5</button>
+            <button class="monthBtn">6</button>
+            <button class="monthBtn">7</button>
+            <button class="monthBtn">8</button>
+            <button class="monthBtn">9</button>
+            <button class="monthBtn">10</button>
+            <button class="monthBtn">11</button>
+            <button class="monthBtn">12</button>
+        </div>
+
+        <div class="achievement_container">
+            <h2 class="achievement_title">ACHIEVEMENT</h2>
+            <h2 class="achievement_percent">30%</h2>
+            <div class="achievement_graph">
+                <div class="achievement_bggraph"></div>
+                <div class="achievement_graph_fill"></div>
+            </div>
+            
+        </div>
+
+        <div class="habbit_choose">
+
+            <h2 class="habbit_title">HABBIT</h2>
+            <button class="habbit_item">
+                <i class="fas fa-star"></i>Exercise
+            </button>
+
+            <button class="habbit_item">
+                <i class="fas fa-star"></i>wake up at 8AM
+            </button>
+            
+        </div>
+    </section>
+
+    <main class="habbit_result">
+        <div class="habbit_result_header">
+            <h1 class="habbit_result_title">HABBIT : Exercise</h1>
+            <button class="result_graph">YEAR GRAPH</button>
+        </div>
+        
+        <div class="habbit_result_main">
+            <div class="habbit_calendar hidden">
+                <div class="weekTitle">
+                    <div class="day">SUN</div>
+                    <div class="day">MON</div>
+                    <div class="day">TUE</div>
+                    <div class="day">WED</div>
+                    <div class="day">THU</div>
+                    <div class="day">FRI</div>
+                    <div class="day">SAT</div>
+                </div>
     
+                <div class="weekRow">
+                    <div class="date">0</div>
+                    <div class="date">0</div>
+                    <div class="date">0</div>
+                    <div class="date">1</div>
+                    <div class="date">2</div>
+                    <div class="date">3</div>
+                    <div class="date">4</div>
+                </div>
+        
+                <div class="weekRow">
+                    <div class="date achieve">0</div>
+                    <div class="date achieve">0</div>
+                    <div class="date">0</div>
+                    <div class="date">1</div>
+                    <div class="date">2</div>
+                    <div class="date">3</div>
+                    <div class="date">4</div>
+                </div>
+        
+                <div class="weekRow">
+                    <div class="date achieve">0</div>
+                    <div class="date">0</div>
+                    <div class="date">0</div>
+                    <div class="date">1</div>
+                    <div class="date">2</div>
+                    <div class="date">3</div>
+                    <div class="date">4</div>
+                </div>
+        
+                <div class="weekRow">
+                    <div class="date">0</div>
+                    <div class="date">0</div>
+                    <div class="date">0</div>
+                    <div class="date">1</div>
+                    <div class="date">2</div>
+                    <div class="date">3</div>
+                    <div class="date">4</div>
+                </div>
+        
+                <div class="weekRow">
+                    <div class="date">0</div>
+                    <div class="date">0</div>
+                    <div class="date">0</div>
+                    <div class="date">1</div>
+                    <div class="date">2</div>
+                    <div class="date">3</div>
+                    <div class="date">4</div>
+                </div>
+            </div>
+            <div class="chart_container">
+                <canvas id="myChart"></canvas>
+            </div>
+            
+        </div>
+        
+    </main>
 </body>
 </html>

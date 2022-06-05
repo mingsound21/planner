@@ -1,0 +1,97 @@
+.habbit_result{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+.habbit_result_main{
+    position: relative;
+}
+/* habbit_header */
+
+.habbit_result_header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    padding: 0 100px;
+}
+
+.habbit_result_title{
+    font-size: 45px;
+    font-family: 'Permanent Marker', cursive;
+    background-color: aqua;
+    padding: 10px;
+}
+
+.result_graph{
+    font-size: 45px;
+    font-family: 'Permanent Marker', cursive;
+    background-color: aqua;
+    padding: 0 10px;
+}
+
+/* habbit_calendar */
+
+.habbit_calendar{
+    background-color: pink;
+    height: 90vh;
+}
+
+.habbit_calendar{
+    display: grid;
+    grid-template-rows: 50px repeat(5, 1fr);
+    padding: 100px 200px;
+}
+
+.weekTitle, .weekRow{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.day{
+    background-color: coral;
+    border: 3px solid black;
+    font-size: 35px;
+    font-family: 'Permanent Marker', cursive;
+}
+
+.date{
+    background-color: cornflowerblue;
+    border: 3px solid black;
+    font-size: 60px;
+    font-family: 'Permanent Marker', cursive;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.achieve{
+    background-color: deeppink;
+}
+
+
+/* habbit yearly chart */
+.chart_container{
+    background-color: pink;
+    position: absolute;
+    height: 90vh;
+    width: 100%;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#myChart{
+    width: 80%;
+}
+
+.hidden{
+    z-index: -1;
+    opacity: 0;
+}
+
+.show{
+    z-index: 1;
+    opacity: 1;
+}
