@@ -1,9 +1,7 @@
-@import '../variable.css';
-
 .week_calendar{
     height: 80vh;
     box-sizing: border-box;
-    margin: 35px var(--main--margin) 15px var(--main--margin);
+    margin: 2.5rem 10rem 0 10rem;
 }
 
 .week_calendar{
@@ -14,30 +12,31 @@
 .week_day_container{
     background-color: #FEF9EF;
     justify-items: stretch;
-    border: 3px solid black;
+    border: 0.3rem solid black;
     display: grid;
-    grid-template-rows: repeat(6, 1fr);
+    grid-template-rows: 0.7fr 5fr;
 }
 
 .week_day_title{
     background-color: #A2D2FF;
     grid-row: 1/2;
-    padding: 0 40px;
+    padding: 0 4rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 50px;
+    font-size: 5rem;
     font-family: 'Permanent Marker', cursive;
 }
 
 .todo_item_container{
+    background-color: pink;
     display: flex;
     align-items: center;
-    height: 60px;
-    font-size: 20px;
-    margin: 0 10px;
+    height: 6rem;
+    font-size: 2rem;
+    margin: 0 1rem;
     font-family: var(--font);
-    border-bottom: 3px solid #001D6E;
+    border-bottom: 0.3remsolid #001D6E;
 }
 
 .todo_item_container:last-child{
@@ -50,10 +49,10 @@ input[type="checkbox"]{
 
 input[type="checkbox"] + label{
     display: inline-block;
-    border: 3px solid black;
-    height: 30px;
-    width: 30px;
-    margin-right: 15px;
+    border: 0.3rem solid black;
+    height: 3rem;
+    width: 3rem;
+    margin-right: 1.5rem;
     
 }
 
@@ -62,7 +61,7 @@ input[type="checkbox"] + label:hover{
 }
 
 .fa-check{
-    font-size: 25px;
+    font-size: 2.5rem;
 }
 
 .hidden{
@@ -74,3 +73,14 @@ input[type="checkbox"] + label:hover{
 }
 /* TODO: todo item 클릭시 체크박스에 표시 되고, 지운 막대는 js로 구현하기
 TODO: todo를 완료했을시 1) 삭제 2) 밑줄표시는 선택으로 나중에 구현 */
+
+
+@media screen and (max-width:1800px) {
+    .week_day_title{
+        font-size: 3.5rem;
+    }
+
+    .todo_item_container{
+    height: 5rem;
+    }
+}

@@ -15,16 +15,16 @@ TODO: schedule모두 작성한뒤에 enter 또는 submit 버튼 클릭시 스케
 .add_schedule_container{
     background-color: #E3FCBF;
     position: absolute;
-    top: 250px;
-    left: 500px;
-    width: 600px;
-    height: 600px;
+    top: 25rem;
+    left: 50rem;
+    width: 60rem;
+    height: 60rem;
     display: grid;
-    grid-template-columns: 150px auto;
-    grid-template-rows: 60px 60px auto;
-    padding: 40px;
+    grid-template-columns: 15rem auto;
+    grid-template-rows: 6rem 6rem auto;
+    padding: 4rem;
     align-items: center;
-    border: 7px solid black;
+    border: 0.7rem solid black;
     transition: opacity 1s ease-in-out;
 }
 .schedule_bg_hidden{
@@ -52,47 +52,54 @@ label[for = 'schedule_date']{
 }
 
 label[for = 'schedule']{
-    margin-top: 15px;
+    margin-top: 1.5rem;
     grid-column: 1/2;
     align-self: start;
 }
 
 button[type = 'submit']{
     grid-column: 2/3;
-    border: 5px solid black;
-    width: 150px;
-    margin: 30px 0 0 20px;
+    border: 0.5rem solid black;
+    width: 15rem;
+    margin: 3rem 0 0 2rem;
     background-color: #FFB2A6;
 }
 .add_schedule_container label, button[type='submit']{
-    font-size: 35px;
+    font-size: 3.5rem;
     font-family: 'Permanent Marker', cursive;
 }
 
 
 input[type = 'color']{
-    width: 100px;
-    height: 40px;
+    width: 10rem;
+    height: 4rem;
     background-color: transparent;
     border: none;
 }
 
 input[id = 'schedule_date']{
-    width: 300px;
-    height: 35px;
-    font-size: 22px;
+    width: 30rem;
+    height: 3.5rem;
+    font-size: 2.2rem;
     font-family: 'Permanent Marker', cursive;
 }
 
 textarea{
-    margin-top: 15px;
-    width: 350px;
-    height: 300px;
-    font-size: 30px;
+    margin-top: 1.5rem;
+    width: 35rem;
+    height: 30rem;
+    font-size: 3rem;
     font-family: 'Permanent Marker', cursive;
     align-self: start;
 }
 
 .days:active{
     background-color: pink;
+}
+
+@media screen and (max-width:1800px) {
+    .add_schedule_container{
+        top: 10rem;
+        left: 55rem;
+    }
 }

@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="../CSS/monthly/header.css">
     <link rel="stylesheet" href="../CSS/monthly/calendar.css">
     <link rel="stylesheet" href="../CSS/monthly/schedule.css">
+    <link rel="stylesheet" href="../CSS/navBar.css">
 
     <!-- Icon -->
     <script src="https://kit.fontawesome.com/99cf562452.js" crossorigin="anonymous"></script>
@@ -27,118 +28,119 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
 </head>
 <body>
-    <header class="monthly_header">
-        <div class="months_btn_container">
-            <button class="months_btn"><span>1</span></button>
-            <button class="months_btn"><span>2</span></button>
-            <button class="months_btn"><span>3</span></button>
-            <button class="months_btn"><span>4</span></button>
-            <button class="months_btn"><span>5</span></button>
-            <button class="months_btn"><span>6</span></button>
-            <button class="months_btn"><span>7</span></button>
-            <button class="months_btn"><span>8</span></button>
-            <button class="months_btn"><span>9</span></button>
-            <button class="months_btn"><span>10</span></button>
-            <button class="months_btn"><span>11</span></button>
-            <button class="months_btn"><span>12</span></button>
-            
-        </div>
-        <h1 class="month">1월</h1>
-        <div class="habbit_tracker">
-            <div class="habbit_tracker_header">
-                Habbit Tracker
-            </div>
-            <div class="habbit_tracker_itemContainer">
-                <div class="habbit_tracker_item">
-                    <i class="fa-regular fa-circle-check"></i>
-                    <span>운동</span>
-                </div>
-                <div class="habbit_tracker_item">
-                    <i class="fa-regular fa-circle-check"></i>
-                    <span>운동</span>
-                </div>
-            </div>
-        </div>
-    </header>
     
-    <main class="calendar">
-        <div class="week">
-            <button class="week_btn">week</button>
-            <div class="days"><span class="dayOfWeek">SUN</span></div>
-            <div class="days"><span class="dayOfWeek">MON</span></div>
-            <div class="days"><span class="dayOfWeek">TUE</span></div>
-            <div class="days"><span class="dayOfWeek">WED</span></div>
-            <div class="days"><span class="dayOfWeek">THR</span></div>
-            <div class="days"><span class="dayOfWeek">FRI</span></div>
-            <div class="days"><span class="dayOfWeek">SAT</span></div>
-        </div>
-        <div class="week">
-            <button class="week_btn"><a href="./weekly.html">1</a></button>
-            <div class="days"><span class="day_num">1</span></div>
-            <div class="days"><span class="day_num">2</span></div>
-            <div class="days"><span class="day_num">3</span></div>
-            <div class="days"><span class="day_num">4</span></div>
-            <div class="days"><span class="day_num">5</span></div>
-            <div class="days"><span class="day_num">6</span></div>
-            <div class="days"><span class="day_num">7</span></div>
-        </div>
-        <div class="week">
-            <button class="week_btn"><a href="./weekly.html">2</a></button>
-            <div class="days"><span class="day_num">1</span></div>
-            <div class="days"><span class="day_num">1</span></div>
-            <div class="days"><span class="day_num">1</span></div>
-            <div class="days"><span class="day_num">1</span></div>
-            <div class="days"><span class="day_num">1</span></div>
-            <div class="days"><span class="day_num">1</span></div>
-            <div class="days"><span class="day_num">1</span></div>
-        </div>
-        <div class="week">
-            <button class="week_btn"><a href="./weekly.html">3</a></button>
-            <div class="days"><span class="day_num">1</span></div>
-            <div class="days"><span class="day_num">1</span></div>
-            <div class="days"><span class="day_num">1</span></div>
-            <div class="days"><span class="day_num">1</span></div>
-            <div class="days"><span class="day_num">1</span></div>
-            <div class="days"><span class="day_num">1</span></div>
-            <div class="days"><span class="day_num">1</span></div>
-        </div>
-        <div class="week">
-            <button class="week_btn"><a href="./weekly.html">4</a></button>
-            <div class="days"><span class="day_num">1</span></div>
-            <div class="days"><span class="day_num">1</span></div>
-            <div class="days"><span class="day_num">1</span></div>
-            <div class="days"><span class="day_num">1</span></div>
-            <div class="days"><span class="day_num">1</span></div>
-            <div class="days"><span class="day_num">1</span></div>
-            <div class="days"><span class="day_num">1</span></div>
-        </div>
-        <div class="week">
-            
-            <button class="week_btn"><a href="./weekly.html">5</a></button>
-            <div class="days"><span class="day_num">1</span></div>
-            <div class="days"><span class="day_num">1</span></div>
-            <div class="days"><span class="day_num">1</span></div>
-            <div class="days"><span class="day_num">1</span></div>
-            <div class="days"><span class="day_num">1</span></div>
-            <div class="days"><span class="day_num">1</span></div>
-            <div class="days"><span class="day_num">1</span></div>
-        </div>
-    </main>
-    <section class="schedule_container">
-        <div class="schedule_bg schedule_bg_hidden"></div>
-        <div class="add_schedule_container schedule_hidden">
-            <label for="schedule_color">COLOR : </label>
-            <input type="color" id="schedule_color" value="#F7D716">
-    
-            <label for="schedule_date">DATE : </label>
-            <input type="text" name="daterange" value="" id="schedule_date">
-            
-            <label for="schedule">TO DO : </label>
-            <textarea placeholder="WRITE TO DO" name="schedule_text" id="schedule" cols="20" rows="40"></textarea>
+    <aside class="navBar">
+        <ul class="nav_btn_container">
+            <a href="./monthly.html"><li class="nav_btn_item month_nav_btn">monthly</li></a>
+            <a href="./weekly.html"><li class="nav_btn_item week_nav_btn">weekly</li></a>
+            <a href="./habbit_tracker.html"><li class="nav_btn_item habbit_nav_btn">habbit-tracker</li></a>
+        </ul>
+    </aside>
+
+    <main>
+        <header class="monthly_header">
         
-            <button type="submit">Finish</button>
-        </div>
-    </section>
+            <h1 class="month">1월</h1>
+    
+            <div class="months_btn_container">
+                <button class="months_btn"><span>1</span></button>
+                <button class="months_btn"><span>2</span></button>
+                <button class="months_btn"><span>3</span></button>
+                <button class="months_btn"><span>4</span></button>
+                <button class="months_btn"><span>5</span></button>
+                <button class="months_btn"><span>6</span></button>
+                <button class="months_btn"><span>7</span></button>
+                <button class="months_btn"><span>8</span></button>
+                <button class="months_btn"><span>9</span></button>
+                <button class="months_btn"><span>10</span></button>
+                <button class="months_btn"><span>11</span></button>
+                <button class="months_btn"><span>12</span></button>
+                
+            </div>
+        </header>
+        
+        <section class="calendar">
+            <div class="week">
+                <button class="week_btn">week</button>
+                <div class="days"><span class="dayOfWeek">SUN</span></div>
+                <div class="days"><span class="dayOfWeek">MON</span></div>
+                <div class="days"><span class="dayOfWeek">TUE</span></div>
+                <div class="days"><span class="dayOfWeek">WED</span></div>
+                <div class="days"><span class="dayOfWeek">THR</span></div>
+                <div class="days"><span class="dayOfWeek">FRI</span></div>
+                <div class="days"><span class="dayOfWeek">SAT</span></div>
+            </div>
+            <div class="week">
+                <button class="week_btn"><a href="./weekly.html">1</a></button>
+                <div class="days"><span class="day_num">1</span></div>
+                <div class="days"><span class="day_num">2</span></div>
+                <div class="days"><span class="day_num">3</span></div>
+                <div class="days"><span class="day_num">4</span></div>
+                <div class="days"><span class="day_num">5</span></div>
+                <div class="days"><span class="day_num">6</span></div>
+                <div class="days"><span class="day_num">7</span></div>
+            </div>
+            <div class="week">
+                <button class="week_btn"><a href="./weekly.html">2</a></button>
+                <div class="days"><span class="day_num">1</span></div>
+                <div class="days"><span class="day_num">1</span></div>
+                <div class="days"><span class="day_num">1</span></div>
+                <div class="days"><span class="day_num">1</span></div>
+                <div class="days"><span class="day_num">1</span></div>
+                <div class="days"><span class="day_num">1</span></div>
+                <div class="days"><span class="day_num">1</span></div>
+            </div>
+            <div class="week">
+                <button class="week_btn"><a href="./weekly.html">3</a></button>
+                <div class="days"><span class="day_num">1</span></div>
+                <div class="days"><span class="day_num">1</span></div>
+                <div class="days"><span class="day_num">1</span></div>
+                <div class="days"><span class="day_num">1</span></div>
+                <div class="days"><span class="day_num">1</span></div>
+                <div class="days"><span class="day_num">1</span></div>
+                <div class="days"><span class="day_num">1</span></div>
+            </div>
+            <div class="week">
+                <button class="week_btn"><a href="./weekly.html">4</a></button>
+                <div class="days"><span class="day_num">1</span></div>
+                <div class="days"><span class="day_num">1</span></div>
+                <div class="days"><span class="day_num">1</span></div>
+                <div class="days"><span class="day_num">1</span></div>
+                <div class="days"><span class="day_num">1</span></div>
+                <div class="days"><span class="day_num">1</span></div>
+                <div class="days"><span class="day_num">1</span></div>
+            </div>
+            <div class="week">
+                
+                <button class="week_btn"><a href="./weekly.html">5</a></button>
+                <div class="days"><span class="day_num">1</span></div>
+                <div class="days"><span class="day_num">1</span></div>
+                <div class="days"><span class="day_num">1</span></div>
+                <div class="days"><span class="day_num">1</span></div>
+                <div class="days"><span class="day_num">1</span></div>
+                <div class="days"><span class="day_num">1</span></div>
+                <div class="days"><span class="day_num">1</span></div>
+            </div>
+        </section>
+    
+        <section class="schedule_bg schedule_bg_hidden">
+            <div class="add_schedule_container schedule_hidden">
+                <label for="schedule_color">COLOR : </label>
+                <input type="color" id="schedule_color" value="#F7D716">
+        
+                <label for="schedule_date">DATE : </label>
+                <input type="text" name="daterange" value="" id="schedule_date">
+        
+                <label for="schedule">TO DO : </label>
+                <textarea placeholder="WRITE TO DO" name="schedule_text" id="schedule" cols="20" rows="40"></textarea>
+        
+                <button type="submit">Finish</button>
+            </div>
+        </section>
+    </main>
    
 </body>
 </html>
+
+
+

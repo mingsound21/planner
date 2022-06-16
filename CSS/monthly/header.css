@@ -1,8 +1,14 @@
-@import '../variable.css';
+body{
+    display: grid;
+    grid-template-columns: 5vw 95vw;
+    grid-template-rows: auto;
+}
 
 .monthly_header{
     display: flex;
-    height: var(--header--height);
+    justify-content: flex-end;
+    height: 15vh;
+    width: 100%;
 }
 
 .months_btn_container{
@@ -12,17 +18,17 @@
     width: 20%;
     align-items: center;
     justify-items: center;
-    padding: 10px 30px;
+    padding: 10px;
 }
 
 .months_btn{
     background-color: #FFD24C;
-    width: 40px;
-    height: 40px;
+    width: 4rem;
+    height: 4rem;
     align-items: center;
-    border-radius: 8px;
-    font-size: 20px;
-    font-family: var(--font);
+    border-radius: 0.8rem;
+    font-size: 2rem;
+    font-family: 'Song Myung', serif;
 }
 
 .months_btn span{
@@ -31,37 +37,20 @@
 }
 
 .month{
-    width: 80%;
-    font-size: 70px;
+    width: 33%;
+    font-size: 7rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: var(--font);
+    font-family: 'Song Myung', serif;
     /* transform: skew(-10deg, 0); */
 }
 
-.habbit_tracker{
-    width: 20%;
-    border: 5px solid #FFE69A;
-    margin: 20px 20px 0 0;
-}
-
-.habbit_tracker_header{
-    font-size: 20px;
-    text-align: center;
-    padding: 10px 0;
-    font-family: var(--font);
-}
-.habbit_tracker_itemContainer{
-    padding-left: 55px;
-}
-.habbit_tracker_item{
-    display: flex;
-    flex-grow: 1;
-    justify-content: flex-start;
-    font-size: 18px;
-    margin: 10px 0;
-}
-.habbit_tracker_item span{
-    margin-left: 18px;
+@media screen and (max-width:1800px) {
+    .month{
+        width: 50vw;
+    }
+    .months_btn_container{
+        width:25vw;
+    }
 }

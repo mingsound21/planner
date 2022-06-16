@@ -1,10 +1,7 @@
-@import '../variable.css';
-
-
 .calendar{
     background-color: beige;
-    margin: 35px var(--main--margin) 15px var(--main--margin);
-    height: 80vh;
+    margin: 3.5rem 10rem 1rem 10rem;
+    height: 75vh;
     display: grid;
     grid-template-rows: 0.5fr repeat(5, 1fr);
     font-family: 'Permanent Marker', cursive;
@@ -12,19 +9,17 @@
 
 .week{
     display: grid;
-    grid-template-columns: 100px repeat(7, 1fr);
+    grid-template-columns: 10rem repeat(7, 1fr);
     align-items: stretch;
 }
 .week_btn{
-    border: 3px solid rgba(0,0,0,0.5);
+    border: 0.3rem solid rgba(0,0,0,0.5);
     font-family: 'Permanent Marker', cursive;
-    font-size: 40px;
+    font-size: 4rem;
 }
 
-
-
 .days{
-    border: 3px solid rgba(0,0,0,0.5);
+    border: 0.3rem solid rgba(0,0,0,0.5);
     border-left: none;
     font-family: 'Permanent Marker', cursive;
     position: relative;
@@ -37,21 +32,27 @@
 .week:first-child{
     background-color: #92B4EC;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    text-align: center;
 }
+
+.week:first-child .days{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .dayOfWeek{
     font-size: 50px;
 }
 
 .day_num{
-    font-size: 25px;
+    font-size: 2.5rem;
     position: absolute;
-    top:5px;
-    left: 8px;
+    top:0.5rem;
+    left: 0.8rem;
 }
 
 .week:first-child .week_btn  {
-    font-size: 25px;
+    font-size: 2.5rem;
     background-color: beige;
 }
 
@@ -61,4 +62,14 @@
 
 .week:not(:first-child) .week_btn:hover{
     cursor: pointer;
+}
+
+@media screen and (max-width:1800px) {
+    .dayOfWeek{
+        font-size: 3.5rem;
+    }
+    .calendar{
+        margin: 2.5rem 5rem 1rem 5rem;
+    }
+
 }

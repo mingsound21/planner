@@ -1,4 +1,8 @@
-@import '../variable.css';
+body{
+    display: grid;
+    grid-template-columns: 5vw 95vw;
+    grid-template-rows: auto;
+}
 
 .weekly_header{
     height: 15vh;
@@ -11,20 +15,20 @@
     grid-template-columns: repeat(5, 1fr);
     align-items: center;
     justify-items: center;
-    padding-left: 100px;
+    padding-left: 10rem;
 }
 
 .weeks_btn{
     background-color: #FF865E;
-    width: 50px;
-    height: 50px;
-    border-radius: 15px;
-    font-size: 20px;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 1.5rem;
+    font-size: 2rem;
     font-family: var(--font);
 }
 
 .week_title{
-    font-size: 70px;
+    font-size: 7rem;
     font-family: var(--font);
     grid-column: 2/5;
     display:flex;
@@ -35,5 +39,15 @@
 
 .week_title span{
     background-color: #FEE440;
-    padding: 25px;
+    padding: 2.5rem;
+}
+
+@media screen and (max-width:1800px) {
+    .weekly_header{
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .week_title{
+        grid-column: 2/4;
+    }
 }

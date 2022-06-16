@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../CSS/reset.css">
     <link rel="stylesheet" href="../CSS/weekly/weekly_header.css">
     <link rel="stylesheet" href="../CSS/weekly/weekly_calendar.css">
+    <link rel="stylesheet" href="../CSS/navBar.css">
 
     <!-- Icon -->
     <script src="https://kit.fontawesome.com/99cf562452.js" crossorigin="anonymous"></script>
@@ -22,127 +23,140 @@
         rel="stylesheet">
 </head>
 <body>
-    <header class="weekly_header">
-        <div class="weeks_btn_container">
-            <button class="weeks_btn"><span>1</span></button>
-            <button class="weeks_btn"><span>2</span></button>
-            <button class="weeks_btn"><span>3</span></button>
-            <button class="weeks_btn"><span>4</span></button>
-            <button class="weeks_btn"><span>5</span></button>
-        </div>
+    <aside class="navBar">
+        <ul class="nav_btn_container">
+            <a href="./monthly.html"><li class="nav_btn_item month_nav_btn">monthly</li></a>
+            <a href="./weekly.html"><li class="nav_btn_item week_nav_btn">weekly</li></a>
+            <a href="./habbit_tracker.html"><li class="nav_btn_item habbit_nav_btn">habbit-tracker</li></a>
+        </ul>
+    </aside>
 
-        <h1 class="week_title">
-            <span>1월 week 1</span>
-        </h1>
-    </header>
-
-    <main class="week_calendar">
-        <div class="week_day_container">
-            <div class="week_day_title">
-                <span class="day">
-                    SUN
-                </span>
-                <span class="week_day_num">
-                    1
-                </span>
+    <section>
+        <header class="weekly_header">
+            <div class="weeks_btn_container">
+                <button class="weeks_btn"><span>1</span></button>
+                <button class="weeks_btn"><span>2</span></button>
+                <button class="weeks_btn"><span>3</span></button>
+                <button class="weeks_btn"><span>4</span></button>
+                <button class="weeks_btn"><span>5</span></button>
             </div>
-            <div class="todo_container">
-                
-                <div class="todo_item_container">
-                    <input type="checkbox" id="todo_checkbox2">
-                    <label for="todo_checkbox2">
-                        <i class="fa-solid fa-check"></i>
-                    </label>
-                    <span class="todo_item">강의 듣기</span>
+    
+            <h1 class="week_title">
+                <span>1월 week 1</span>
+            </h1>
+        </header>
+    
+        <main class="week_calendar">
+            <div class="week_day_container">
+                <div class="week_day_title">
+                    <span class="day">
+                        SUN
+                    </span>
+                    <span class="week_day_num">
+                        1
+                    </span>
                 </div>
-
-                <div class="todo_item_container">
-                    <input type="checkbox" id="todo_checkbox2">
-                    <label for="todo_checkbox2">
-                        <i class="fa-solid fa-check"></i>
-                    </label>
-                    <span class="todo_item">강의 듣기</span>
+                <div class="todo_container">
+                    
+                    <div class="todo_item_container">
+                        <input type="checkbox" id="todo_checkbox2">
+                        <label for="todo_checkbox2">
+                            <i class="fa-solid fa-check"></i>
+                        </label>
+                        <span class="todo_item">강의 듣기</span>
+                    </div>
+    
+                    <div class="todo_item_container">
+                        <input type="checkbox" id="todo_checkbox2">
+                        <label for="todo_checkbox2">
+                            <i class="fa-solid fa-check"></i>
+                        </label>
+                        <span class="todo_item">강의 듣기</span>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="week_day_container">
-            <div class="week_day_title">
-                <span class="day">
-                    MON
-                </span>
-                <span class="week_day_num">
-                    1
-                </span>
-            </div>
-            <div class="todo_container">
-                <div class="todo_container"></div>
-            </div>
-        </div>
             <div class="week_day_container">
-            <div class="week_day_title">
-                <span class="day">
-                    TUE
-                </span>
-                <span class="week_day_num">
-                    1
-                </span>
+                <div class="week_day_title">
+                    <span class="day">
+                        MON
+                    </span>
+                    <span class="week_day_num">
+                        1
+                    </span>
+                </div>
+                <div class="todo_container">
+                    <div class="todo_container"></div>
+                </div>
             </div>
-            <div class="todo_container">
-                <div class="todo_container"></div>
+                <div class="week_day_container">
+                <div class="week_day_title">
+                    <span class="day">
+                        TUE
+                    </span>
+                    <span class="week_day_num">
+                        1
+                    </span>
+                </div>
+                <div class="todo_container">
+                    <div class="todo_container"></div>
+                </div>
             </div>
-        </div>
-            <div class="week_day_container">
-            <div class="week_day_title">
-                <span class="day">
-                    WED
-                </span>
-                <span class="week_day_num">
-                    1
-                </span>
+                <div class="week_day_container">
+                <div class="week_day_title">
+                    <span class="day">
+                        WED
+                    </span>
+                    <span class="week_day_num">
+                        1
+                    </span>
+                </div>
+                <div class="todo_container">
+                    <div class="todo_container"></div>
+                </div>
             </div>
-            <div class="todo_container">
-                <div class="todo_container"></div>
+                <div class="week_day_container">
+                <div class="week_day_title">
+                    <span class="day">
+                        THU
+                    </span>
+                    <span class="week_day_num">
+                        1
+                    </span>
+                </div>
+                <div class="todo_container">
+                    <div class="todo_container"></div>
+                </div>
             </div>
-        </div>
-            <div class="week_day_container">
-            <div class="week_day_title">
-                <span class="day">
-                    THU
-                </span>
-                <span class="week_day_num">
-                    1
-                </span>
+                <div class="week_day_container">
+                <div class="week_day_title">
+                    <span class="day">
+                        FRI
+                    </span>
+                    <span class="week_day_num">
+                        1
+                    </span>
+                </div>
+                <div class="todo_container">
+                    <div class="todo_container"></div>
+                </div>
             </div>
-            <div class="todo_container">
-                <div class="todo_container"></div>
+                <div class="week_day_container">
+                <div class="week_day_title">
+                    <span class="day">
+                        SAT
+                    </span>
+                    <span class="week_day_num">
+                        7
+                    </span>
+                </div>
+                <div class="todo_container">
+                    <div class="todo_container"></div>
+                </div>
             </div>
-        </div>
-            <div class="week_day_container">
-            <div class="week_day_title">
-                <span class="day">
-                    FRI
-                </span>
-                <span class="week_day_num">
-                    1
-                </span>
-            </div>
-            <div class="todo_container">
-                <div class="todo_container"></div>
-            </div>
-        </div>
-            <div class="week_day_container">
-            <div class="week_day_title">
-                <span class="day">
-                    SAT
-                </span>
-                <span class="week_day_num">
-                    7
-                </span>
-            </div>
-            <div class="todo_container">
-                <div class="todo_container"></div>
-            </div>
-        </div>
-    </main>
+        </main>
+    </section>
+    
 </body>
 </html>
+
+
