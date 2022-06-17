@@ -7,11 +7,12 @@
     font-family: 'Permanent Marker', cursive;
 }
 
-.week{
+.week, .weekTitle{
     display: grid;
     grid-template-columns: 10rem repeat(7, 1fr);
     align-items: stretch;
 }
+
 .week_btn{
     border: 0.3rem solid rgba(0,0,0,0.5);
     font-family: 'Permanent Marker', cursive;
@@ -25,23 +26,23 @@
     position: relative;
 }
 
-.calendar .week:not(:first-of-type) button,.calendar .week:not(:first-of-type) .days{
+.calendar .week button, .calendar .week .days{
     border-top: none;
 }
 
-.week:first-child{
+.weekTitle{
     background-color: #92B4EC;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.week:first-child .days{
+.weekTitle .days{
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .dayOfWeek{
-    font-size: 50px;
+    font-size: 5rem;
 }
 
 .day_num{
@@ -49,19 +50,43 @@
     position: absolute;
     top:0.5rem;
     left: 0.8rem;
+    z-index:1;
 }
 
-.week:first-child .week_btn  {
+.week .week_btn  {
     font-size: 2.5rem;
     background-color: beige;
 }
 
-.week:not(:first-child) .week_btn{
+.weekTitle .week_btn{
+    font-size: 3rem;
+    background-color: pink;
+}
+
+.week .week_btn{
     background-color: #FFD24C;
 }
 
-.week:not(:first-child) .week_btn:hover{
+.week .week_btn:hover{
     cursor: pointer;
+}
+
+.date_dot{
+    width: 4rem;
+    height: 4rem;
+    position: absolute;
+    z-index:0;
+    border-radius: 50%;
+    top: 0.1rem;
+    left: 0.4rem;
+}
+
+.today{
+    background-color: crimson;
+}
+
+.click{
+    background-color: blue;
 }
 
 @media screen and (max-width:1800px) {

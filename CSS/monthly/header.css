@@ -5,52 +5,61 @@ body{
 }
 
 .monthly_header{
-    display: flex;
-    justify-content: flex-end;
     height: 15vh;
     width: 100%;
+    position: relative;
 }
-
-.months_btn_container{
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: 1fr 1fr;
-    width: 20%;
-    align-items: center;
-    justify-items: center;
-    padding: 10px;
-}
-
-.months_btn{
-    background-color: #FFD24C;
-    width: 4rem;
-    height: 4rem;
-    align-items: center;
-    border-radius: 0.8rem;
-    font-size: 2rem;
-    font-family: 'Song Myung', serif;
-}
-
-.months_btn span{
-    display: inline-block;
-    transform: skew(-20deg, 0);
-}
-
-.month{
-    width: 33%;
-    font-size: 7rem;
+.year_container{
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: 'Song Myung', serif;
+    position: absolute;
+    top: 2.5rem;
+    left: 5rem;
+    border-bottom: 3px solid palegoldenrod;
+}
+
+.year_left_icon, .year_right_icon{
+    font-size: 2.5rem;
+    padding: 1rem 1.5rem;
+    color: rgb(143, 143, 143);
+    transition: all .3s ease-in-out;
+}
+.year{
+    font-family: 'Permanent Marker', cursive;
+    font-size: 3rem;
+}
+
+.month_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.month{
+    font-family: 'Permanent Marker', cursive;
+    font-size: 7rem;
+    margin: 0 6rem;
     /* transform: skew(-10deg, 0); */
 }
 
+.month_left_icon, .month_right_icon{
+    font-size: 4rem;
+    padding: 0 3rem;
+    color: rgb(143, 143, 143);
+    transition: all .3s ease-in-out;
+}
+
+.year_left_icon:hover, .year_right_icon:hover{
+    color: #3AB0FF;
+    transform: scale(1.2);
+}
+
+.month_left_icon:hover, .month_right_icon:hover{
+    color: #3AB0FF;
+    transform: scale(1.1);
+}
 @media screen and (max-width:1800px) {
-    .month{
-        width: 50vw;
-    }
-    .months_btn_container{
-        width:25vw;
-    }
+    
 }

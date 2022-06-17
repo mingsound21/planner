@@ -12,7 +12,6 @@
 .week_day_container{
     background-color: #FEF9EF;
     justify-items: stretch;
-    border: 0.3rem solid black;
     display: grid;
     grid-template-rows: 0.7fr 5fr;
 }
@@ -26,17 +25,28 @@
     align-items: center;
     font-size: 5rem;
     font-family: 'Permanent Marker', cursive;
+    border: 0.5rem solid black;
+}
+.week_day_container:not(:first-of-type) .week_day_title{
+    border-left: none;
 }
 
+.todo_container{
+    border: 0.5rem solid black;
+    border-top: none;
+}
+.week_day_container:not(:first-of-type) .todo_container{
+    
+    border-left: none;
+}
 .todo_item_container{
-    background-color: pink;
+    
     display: flex;
     align-items: center;
     height: 6rem;
     font-size: 2rem;
     margin: 0 1rem;
-    font-family: var(--font);
-    border-bottom: 0.3remsolid #001D6E;
+    border-bottom: 0.3rem solid #001D6E;
 }
 
 .todo_item_container:last-child{

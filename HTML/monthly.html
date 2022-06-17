@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="../CSS/monthly/schedule.css">
     <link rel="stylesheet" href="../CSS/navBar.css">
 
+    <!-- JS -->
+    <script defer src="../JS/monthly/monthly.js"></script>
     <!-- Icon -->
     <script src="https://kit.fontawesome.com/99cf562452.js" crossorigin="anonymous"></script>
 
@@ -39,28 +41,21 @@
 
     <main>
         <header class="monthly_header">
-        
-            <h1 class="month">1월</h1>
-    
-            <div class="months_btn_container">
-                <button class="months_btn"><span>1</span></button>
-                <button class="months_btn"><span>2</span></button>
-                <button class="months_btn"><span>3</span></button>
-                <button class="months_btn"><span>4</span></button>
-                <button class="months_btn"><span>5</span></button>
-                <button class="months_btn"><span>6</span></button>
-                <button class="months_btn"><span>7</span></button>
-                <button class="months_btn"><span>8</span></button>
-                <button class="months_btn"><span>9</span></button>
-                <button class="months_btn"><span>10</span></button>
-                <button class="months_btn"><span>11</span></button>
-                <button class="months_btn"><span>12</span></button>
-                
+            <div class="year_container">
+                <i class="fas fa-caret-left year_left_icon" data-action="year_left"></i>
+                <span class="year">2022</span>
+                <i class="fas fa-caret-right year_right_icon" data-action="year_right"></i>
+            </div>
+
+            <div class="month_container">
+                <i class="fas fa-chevron-left month_left_icon" data-action="month_left"></i>
+                <h1 class="month">1</h1>
+                <i class="fas fa-chevron-right month_right_icon" data-action="month_right"></i>
             </div>
         </header>
         
         <section class="calendar">
-            <div class="week">
+            <div class="weekTitle">
                 <button class="week_btn">week</button>
                 <div class="days"><span class="dayOfWeek">SUN</span></div>
                 <div class="days"><span class="dayOfWeek">MON</span></div>
@@ -79,6 +74,7 @@
                 <div class="days"><span class="day_num">5</span></div>
                 <div class="days"><span class="day_num">6</span></div>
                 <div class="days"><span class="day_num">7</span></div>
+                
             </div>
             <div class="week">
                 <button class="week_btn"><a href="./weekly.html">2</a></button>

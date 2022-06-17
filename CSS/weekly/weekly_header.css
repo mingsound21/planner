@@ -4,10 +4,27 @@ body{
     grid-template-rows: auto;
 }
 
+.year_month_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 2.5rem;
+    left: 5rem;
+    padding: 1rem 1.5rem;
+    border-bottom: 3px solid palegoldenrod;
+}
+
+.year_month{
+    font-family: 'Permanent Marker', cursive;
+    font-size: 3rem;
+}
+
 .weekly_header{
     height: 15vh;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
+    position: relative;
 }
 
 .weeks_btn_container{
@@ -15,7 +32,12 @@ body{
     grid-template-columns: repeat(5, 1fr);
     align-items: center;
     justify-items: center;
-    padding-left: 10rem;
+    padding-right: 10rem;
+}
+
+.week_num{
+    font-size: 7rem;
+    padding: 0 3rem;
 }
 
 .weeks_btn{
@@ -24,23 +46,19 @@ body{
     height: 5rem;
     border-radius: 1.5rem;
     font-size: 2rem;
-    font-family: var(--font);
+    font-family: 'Permanent Marker', cursive;
 }
 
 .week_title{
-    font-size: 7rem;
-    font-family: var(--font);
+    font-size: 5rem;
+    font-family: 'Permanent Marker', cursive;
     grid-column: 2/5;
     display:flex;
     align-items: center;
     justify-content: center;
-    
+    /* border-bottom: 3px solid palegoldenrod; */
 }
 
-.week_title span{
-    background-color: #FEE440;
-    padding: 2.5rem;
-}
 
 @media screen and (max-width:1800px) {
     .weekly_header{
@@ -51,3 +69,14 @@ body{
         grid-column: 2/4;
     }
 }
+
+/* .year_left_icon, .year_right_icon{
+    font-size: 2.5rem;
+    padding: 1rem 1.5rem;
+    color: rgb(143, 143, 143);
+    transition: all .3s ease-in-out;
+}
+.year_left_icon:hover, .year_right_icon:hover{
+    color: #3AB0FF;
+    transform: scale(1.2);
+} */
