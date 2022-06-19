@@ -47,6 +47,12 @@ body{
     border-radius: 1.5rem;
     font-size: 2rem;
     font-family: 'Permanent Marker', cursive;
+    transition: all 0.3s ease-in-out;
+}
+
+.weeks_btn:hover{
+    background-color: #FFD59E;
+    transform: scale(1.1);
 }
 
 .week_title{
