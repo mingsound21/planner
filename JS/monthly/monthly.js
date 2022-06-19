@@ -1,3 +1,5 @@
+import {makeCalendar} from './calendar.js';
+
 const $day_nums = document.querySelectorAll(".day_num");
 const $days = document.querySelectorAll(".days");
 const $month_header_container = document.querySelector('.month_container');
@@ -27,41 +29,7 @@ function setToToday(){
     makeCalendar($day_nums, Year, Month);
 }
 
-function makeCalendar(dayObjArray, Year, Month){
-    let MonthLastDateObj = new Date(Year, Month, 0); 
-    let MonthLastDate = MonthLastDateObj.getDate();
-    
-    let MonthStartDayObj = new Date(Year, Month, 1);
-    let MonthStartDay = MonthStartDayObj.getDay();
-    
-    let i;
-    for(i=0;i<dayObjArray.length;i++){
-        dayObjArray[i].innerHTML="";
-    }
 
-    // let day = MonthStartDay;
-    // let LastMonthDate = new Date(Year, Month-1, 0).getDate();
-    // for(i=day-1;i>=0;i--){
-    //     dayObjArray[i].innerHTML = LastMonthDate;
-    //     dayObjArray[i].style.color = 'gray';
-    //     LastMonthDate--;
-    // }
-
-    day = MonthStartDay;
-    for(i=1;i<=MonthLastDate;i++){
-        dayObjArray[day].innerHTML = i;
-        day++;
-    }
-
-    // let NextMonthDay = new Date(Year, Month+1, 1).getDay();
-    // i=1;
-    // for(;NextMonthDay<7;NextMonthDay++){
-    //     dayObjArray[day].innerHTML = i;
-    //     dayObjArray[day].style.color = 'gray';
-    //     i++;
-    //     day++;
-    // }
-}
 
 class headerControl{
     constructor(year, month){
@@ -128,3 +96,4 @@ $year_header_container.addEventListener('click', (event)=>{
 window.addEventListener('load', () =>{
     setToToday();
 })
+

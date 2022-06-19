@@ -17,8 +17,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 2.5rem 2rem;
-    
+    justify-content: center;
 }
 
 .year_title{
@@ -27,14 +26,24 @@ body{
     margin-bottom: 2rem;
 }
 
-#year_input{
+.year{
     font-size: 2.5rem;
     font-family: 'Permanent Marker', cursive;
     border: none;
     text-align: center;
     width: 12rem;
 }
+.year_left_icon, .year_right_icon{
+    font-size: 2.5rem;
+    padding: 1rem 1.5rem;
+    color: rgb(143, 143, 143);
+    transition: all .3s ease-in-out;
+}
 
+.year_left_icon:hover, .year_right_icon:hover{
+    color: #3AB0FF;
+    transform: scale(1.1);
+}
 .month_btn_container{
     background-color: palegreen;
     height: 22vh;
@@ -63,6 +72,14 @@ body{
     border-radius: 0.8rem;
     font-size: 2.3rem;
     font-family: 'Permanent Marker', cursive;
+    transition: all .3s ease-in-out;
+}
+
+
+
+.monthBtn:hover, .habbit_item:hover{
+    background-color: #FFD59E;
+    transform: scale(1.1);
 }
 
 .achievement_container{
@@ -135,6 +152,7 @@ body{
     font-size: 2.2rem;
     font-family: 'Permanent Marker', cursive;
     border-radius: 0.8rem;   
+    transition: all .3s ease-in-out;
 }
 .habbit_item i{
     margin-right: 1rem;
@@ -143,13 +161,18 @@ body{
     cursor: pointer;
 }
 
+.clicked{
+    background-color: #FF7396;
+    transform: scale(1.2);
+}
+
 @media screen and (max-width:1800px) {
-    .year_choose{
-        padding: 0 0;
-        padding-top: 1rem;
-    }
     
     .year_title, .month_title, .achievement_title , .achievement_percent, .habbit_title{
         font-size: 3.2rem;
+    }
+
+    .year_title{
+        margin-bottom: 1rem;
     }
 }

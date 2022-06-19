@@ -20,16 +20,17 @@
     font-size: 4.5rem;
     font-family: 'Permanent Marker', cursive;
     background-color: aqua;
-    padding: 1rem;
-}
-
-.result_graph{
-    font-size: 4.5rem;
-    font-family: 'Permanent Marker', cursive;
-    background-color: aqua;
     padding: 0 1rem;
+    transition: background-color .3s ease-in-out;
+}
+.habbit_result_title:hover{
+    cursor: pointer;
+    background-color: #92B4EC;
 }
 
+.graph{
+    background-color: #FF8C8C;
+}
 /* habbit_calendar */
 
 .habbit_calendar{
@@ -53,21 +54,28 @@
     align-items: center;
     justify-content: center;
     background-color: coral;
-    border: 0.3rem solid black;
+    border: 0.7rem solid black;
     font-size: 3.5rem;
     font-family: 'Permanent Marker', cursive;
 }
 
 .date{
     background-color: cornflowerblue;
-    border: 0.3rem solid black;
+    border: 0.7rem solid black;
+    border-top: none;
     font-size: 6rem;
     font-family: 'Permanent Marker', cursive;
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: background-color .4s ease-in-out;
 }
-
+.weekRow .date:not(:first-child), .day:not(:first-child){
+    border-left: none;
+}
+.date:hover{
+    cursor: pointer;
+}
 .achieve{
     background-color: deeppink;
 }
@@ -75,7 +83,7 @@
 
 /* habbit yearly chart */
 .chart_container{
-    background-color: pink;
+    background-color: white;
     position: absolute;
     height: 90vh;
     width: 100%;
@@ -83,6 +91,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: -1;
 }
 
 #myChart{
@@ -99,7 +108,9 @@
     opacity: 1;
 }
 
-
+.habbit_calendar, .chart_container{
+    transition: all .7s ease-in-out;
+}
 
 @media screen and (max-width:1800px) {
     .habbit_result_title, .result_graph{

@@ -12,8 +12,10 @@
     <link rel="stylesheet" href="../CSS/habbit_tracker/habbit_main.css">
     <link rel="stylesheet" href="../CSS/navBar.css">
 
+
     <!-- JS -->
     <script defer src="../JS/habbit_tracker/result_chart.js"></script>
+    <script defer src="../JS/habbit_tracker/habbit_tracker.js" type ='module'></script>
     <!-- Chart.js -->
     <script
 src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
@@ -38,8 +40,16 @@ src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
     
     <section class="side_section">
         <div class="year_choose">
+            
             <h2 class="year_title">YEAR</h2>
-            <input type="text" value="2022" id="year_input">
+            <div class="year_num_container">
+                <i class="fas fa-chevron-left year_left_icon" data-action="year_left"></i>
+                <span class="year"></span>
+                <i class="fas fa-chevron-right year_right_icon" data-action="year_right"></i>
+            </div>
+            
+
+
         </div>
 
         <div class="month_btn_container">
@@ -84,10 +94,11 @@ src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
 
     <main class="habbit_result">
         <div class="habbit_result_header">
-            <h1 class="habbit_result_title">HABBIT : Exercise</h1>
-            <button class="result_graph">YEAR GRAPH</button>
+            <button class="habbit_result_title"></button>
+            <!-- <button class="result_graph">YEAR GRAPH</button> -->
         </div>
         
+
         <div class="habbit_result_main">
             <div class="habbit_calendar">
                 <div class="weekTitle">
@@ -101,56 +112,56 @@ src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
                 </div>
     
                 <div class="weekRow">
-                    <div class="date">0</div>
-                    <div class="date">0</div>
-                    <div class="date">0</div>
-                    <div class="date">1</div>
-                    <div class="date">25</div>
-                    <div class="date">3</div>
-                    <div class="date">4</div>
+                    <div class="date"></div>
+                    <div class="date"></div>
+                    <div class="date"></div>
+                    <div class="date"></div>
+                    <div class="date"></div>
+                    <div class="date"></div>
+                    <div class="date"></div>
                 </div>
         
                 <div class="weekRow">
-                    <div class="date achieve">0</div>
-                    <div class="date achieve">0</div>
-                    <div class="date">0</div>
-                    <div class="date">1</div>
-                    <div class="date">2</div>
-                    <div class="date">3</div>
-                    <div class="date">4</div>
+                    <div class="date"></div>
+                    <div class="date"></div>
+                    <div class="date"></div>
+                    <div class="date"></div>
+                    <div class="date"></div>
+                    <div class="date"></div>
+                    <div class="date"></div>
                 </div>
         
                 <div class="weekRow">
-                    <div class="date achieve">0</div>
-                    <div class="date">0</div>
-                    <div class="date">0</div>
-                    <div class="date">1</div>
-                    <div class="date">2</div>
-                    <div class="date">3</div>
-                    <div class="date">4</div>
+                    <div class="date"></div>
+                    <div class="date"></div>
+                    <div class="date"></div>
+                    <div class="date"></div>
+                    <div class="date"></div>
+                    <div class="date"></div>
+                    <div class="date"></div>
                 </div>
         
                 <div class="weekRow">
-                    <div class="date">0</div>
-                    <div class="date">0</div>
-                    <div class="date">0</div>
-                    <div class="date">1</div>
-                    <div class="date">2</div>
-                    <div class="date">3</div>
-                    <div class="date">4</div>
+                    <div class="date"></div>
+                    <div class="date"></div>
+                    <div class="date"></div>
+                    <div class="date"></div>
+                    <div class="date"></div>
+                    <div class="date"></div>
+                    <div class="date"></div>
                 </div>
         
                 <div class="weekRow">
-                    <div class="date">0</div>
-                    <div class="date">0</div>
-                    <div class="date">0</div>
-                    <div class="date">1</div>
-                    <div class="date">2</div>
-                    <div class="date">3</div>
-                    <div class="date">4</div>
+                    <div class="date"></div>
+                    <div class="date"></div>
+                    <div class="date"></div>
+                    <div class="date"></div>
+                    <div class="date"></div>
+                    <div class="date"></div>
+                    <div class="date"></div>
                 </div>
             </div>
-            <div class="chart_container hidden">
+            <div class="chart_container">
                 <canvas id="myChart"></canvas>
             </div>
             
