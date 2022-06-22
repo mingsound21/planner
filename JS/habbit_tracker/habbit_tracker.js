@@ -30,11 +30,11 @@ $year_num_container.addEventListener("click", (event)=>{
 })
 
 function handleSideBarClick(event, container){
+    const target = event.target.closest('button');
+    if(target == null || target.tagName != 'BUTTON') return;
     const beforeClicked = container.querySelector('.clicked');
     beforeClicked.classList.toggle('clicked');
 
-    const target = event.target.closest('button');
-    if(target.tagName != 'BUTTON') return;
     target.classList.add('clicked');
 }
 
@@ -66,6 +66,7 @@ $habbit_choose.addEventListener("click", (event)=>{
 const $chart_container = document.querySelector('.chart_container');
 
 $habbit_result_title.addEventListener('click', (event)=>{
+    
     if($habbit_result_title.classList.contains('graph')){
         let habbit_name = $habbit_choose.querySelector('.clicked').innerText;
         $habbit_result_title.innerText = `HABBIT : ${habbit_name}`;
@@ -102,4 +103,6 @@ window.addEventListener('load', (event)=>{
         $habbit_item[0].classList.add('clicked');
     }
     $habbit_result_title.innerHTML = `HABBIT : ${$habbit_item[0].innerText}`;
+    $habbit_calendar.classList.add('show');
+    $chart_container.classList.add('hidden');
 })

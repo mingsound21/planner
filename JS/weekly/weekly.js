@@ -15,7 +15,6 @@ const week = calc_week(weekArr);
 const week_date_arr = makeWeekArr(Year, Month, weekArr);
     
 function calc_weekArr(Year, Month){
-    const today = new Date();
     const this_month = new Date(Year, Month, 1);
     const month_first_date = this_month.getDate();
     const month_first_day = this_month.getDay();

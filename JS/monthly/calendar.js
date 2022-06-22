@@ -1,5 +1,5 @@
 function makeCalendar(dayObjArray, Year, Month){
-    let MonthLastDateObj = new Date(Year, Month, 0); 
+    let MonthLastDateObj = new Date(Year, Month+1, 0); 
     let MonthLastDate = MonthLastDateObj.getDate();
     
     let MonthStartDayObj = new Date(Year, Month, 1);
@@ -17,10 +17,12 @@ function makeCalendar(dayObjArray, Year, Month){
     //     dayObjArray[i].style.color = 'gray';
     //     LastMonthDate--;
     // }
+
+    // TODO: 6주까지있는 경우 dayObjArray 대상이 없어서 오류 발생
     let day;
     day = MonthStartDay;
     for(i=1;i<=MonthLastDate;i++){
-        dayObjArray[day].innerHTML = i;
+        dayObjArray[day].innerText = i;
         day++;
     }
 

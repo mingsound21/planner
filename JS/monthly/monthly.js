@@ -97,3 +97,43 @@ window.addEventListener('load', () =>{
     setToToday();
 })
 
+// Schedule
+function toggleSchedule(text){
+    if(text == 'hidden'){
+        $schedule_bg.classList.replace('schedule_bg_show', 'schedule_bg_hidden')
+        $add_schedule_container.classList.replace('schedule_show', 'schedule_hidden')
+    }else{
+        $schedule_bg.classList.replace('schedule_bg_hidden', 'schedule_bg_show')
+        $add_schedule_container.classList.replace('schedule_hidden', 'schedule_show')
+    }
+}
+
+const $schedule_bg = document.querySelector(".schedule_bg");
+const $add_schedule_container = document.querySelector('.add_schedule_container');
+const $start_date = document.querySelector(".start_date");
+const $end_date = document.querySelector('[id=schedule_date]');
+
+$calendar_container.addEventListener('click', (event)=>{
+    const target = event.target.closest('.days');
+
+    if(target.parentNode.classList.contains('weekTitle')) return;
+
+    const year_now = $year_header_container.children[1].innerHTML;
+    const month_now = $month_header_container.children[1].innerHTML;
+    const date_now = target.children[0].innerHTML;
+    
+    toggleSchedule('show');
+    $end_date.focus();
+    $start_date.innerText = `${year_now} / ${month_now} / ${date_now}`;
+})
+
+const $submitBtn = document.querySelector('[type=submit]');
+$submitBtn.addEventListener('click', ()=>{
+    toggleSchedule('hidden')
+});
+
+// 근데 이 그려놓은것을 저장을 어떻게,,,
+function drawSchedule(){
+    // schedule box에서 (색, 시작날짜, 끝나는 날짜, TODO) 가져오기
+}
+

@@ -99,7 +99,8 @@
             </div>
             <div class="week">
                 <button class="week_btn"><a href="./weekly.html">4</a></button>
-                <div class="days"><span class="day_num">1</span></div>
+                
+                <div class="days"><span class="day_num">1</span><div class="schedule_box">hi</div></div>
                 <div class="days"><span class="day_num">1</span></div>
                 <div class="days"><span class="day_num">1</span></div>
                 <div class="days"><span class="day_num">1</span></div>
@@ -108,7 +109,6 @@
                 <div class="days"><span class="day_num">1</span></div>
             </div>
             <div class="week">
-                
                 <button class="week_btn"><a href="./weekly.html">5</a></button>
                 <div class="days"><span class="day_num">1</span></div>
                 <div class="days"><span class="day_num">1</span></div>
@@ -116,7 +116,7 @@
                 <div class="days"><span class="day_num">1</span></div>
                 <div class="days"><span class="day_num">1</span></div>
                 <div class="days"><span class="day_num">1</span></div>
-                <div class="days"><span class="day_num">1</span></div>
+                <div class="days"><span class="day_num">1</span> </div>
             </div>
         </section>
     
@@ -126,10 +126,15 @@
                 <input type="color" id="schedule_color" value="#F7D716">
         
                 <label for="schedule_date">DATE : </label>
-                <input type="text" name="daterange" value="" id="schedule_date">
-        
+                <div class="schedule_date_inputContainer">
+                    <span class="start_date">2022 / 6 / 21</span>
+                    -
+                    <input type="text" placeholder="20XX/MM/DD" name="daterange" value="" id="schedule_date">
+                </div>
+                
+
                 <label for="schedule">TO DO : </label>
-                <textarea placeholder="WRITE TO DO" name="schedule_text" id="schedule" cols="20" rows="40"></textarea>
+                <textarea placeholder="WRITE TO DO" name="schedule_text" id="schedule" cols="20" rows="20"></textarea>
         
                 <button type="submit">Finish</button>
             </div>
