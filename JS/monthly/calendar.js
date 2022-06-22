@@ -36,5 +36,12 @@ function makeCalendar(dayObjArray, Year, Month){
     // }
 }
 
+function getWeekCountofMonth(Year, Month){
+    const firstDate = new Date(Year, Month, 1);
+    const lastDate = new Date(Year, Month+1, 0);
 
-export {makeCalendar};
+    const weekCount = parseInt((parseInt(lastDate.getDate()) + firstDate.getDay() - 1)/7)+1;
+
+    return weekCount;
+}
+export {makeCalendar, getWeekCountofMonth};
