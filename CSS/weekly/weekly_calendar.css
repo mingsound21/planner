@@ -46,7 +46,7 @@
     height: 6rem;
     font-size: 2rem;
     margin: 0 1rem;
-    border-bottom: 0.3rem solid #001D6E;
+    border-bottom: 0.3rem solid #FF7600;
 }
 
 .todo_item_container:last-child{

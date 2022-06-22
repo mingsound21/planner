@@ -4,15 +4,16 @@ body{
     grid-template-columns: 5vw  25vw auto;
     grid-template-rows: auto;
 }
+
 .side_section{
-    background-color: paleturquoise;
+    background-color: white;
     height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
 .year_choose{
-    background-color: palevioletred;
+    background-color: #A2D2FF;
     height: 15vh;
     display: flex;
     flex-direction: column;
@@ -41,11 +42,11 @@ body{
 }
 
 .year_left_icon:hover, .year_right_icon:hover{
-    color: #3AB0FF;
+    color: #D7E9F7;
     transform: scale(1.1);
 }
 .month_btn_container{
-    background-color: palegreen;
+    background-color: #FFF89A;
     height: 22vh;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -64,7 +65,7 @@ body{
 }
 
 .monthBtn{
-    background-color: coral;
+    background-color: rgb(252, 135, 93);
     width: 4rem;
     height: 4rem;
     align-self: center;
@@ -75,8 +76,6 @@ body{
     transition: all .3s ease-in-out;
 }
 
-
-
 .monthBtn:hover, .habbit_item:hover{
     background-color: #FFD59E;
     transform: scale(1.1);
@@ -84,7 +83,7 @@ body{
 
 .achievement_container{
     height: 20vh;
-    background-color: plum;
+    background-color: #dec9ff;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -111,7 +110,7 @@ body{
 .achievement_bggraph{
     width: 80%;
     height: 3.7rem;
-    background-color: aliceblue;
+    background-color: white;
     border-radius: 1rem;
 }
 
@@ -119,14 +118,14 @@ body{
 .achievement_graph_fill{
     width: 24%;
     height: 3.7rem;
-    background-color: purple;
+    background-color: #a252d1;
     position: absolute;
     left: 5.3rem;
     border-radius: 1rem 0 0 1rem;
 }
 
 .habbit_choose{
-    background-color: peachpuff;
+    background-color: #E7FBBE;
     height: 43vh;
     display: flex;
     flex-direction: column;
@@ -142,7 +141,7 @@ body{
 }
 
 .habbit_item{
-    background-color:coral;
+    background-color: rgb(252, 135, 93);
     height: 3rem;
     margin-bottom: 1.5rem;
     width: 80%;
@@ -162,8 +161,8 @@ body{
 }
 
 .clicked{
-    background-color: #FF7396;
-    transform: scale(1.2);
+    background-color: #3DB2FF;
+    transform: scale(1.15);
 }
 
 @media screen and (max-width:1800px) {

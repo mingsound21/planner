@@ -16,7 +16,7 @@ body{
     position: absolute;
     top: 2.5rem;
     left: 5rem;
-    border-bottom: 3px solid palegoldenrod;
+    border-bottom: 3px solid #EB5353;
 }
 
 .year_left_icon, .year_right_icon{
@@ -52,12 +52,12 @@ body{
 }
 
 .year_left_icon:hover, .year_right_icon:hover{
-    color: #3AB0FF;
+    color: #EB5353;
     transform: scale(1.2);
 }
 
 .month_left_icon:hover, .month_right_icon:hover{
-    color: #3AB0FF;
+    color: #EB5353;
     transform: scale(1.1);
 }
 @media screen and (max-width:1800px) {

@@ -91,7 +91,7 @@ function drawWeek(week_date_arr, week){
 function colorToday(){
     let day = today.getDay();
     if($week_num.innerHTML == week){
-        $week_day_title[day].style.backgroundColor = "#F9FFA4";
+        $week_day_title[day].style.backgroundColor = "#FFD59E";
     }else{
         $week_day_title[day].style.backgroundColor = "#A2D2FF";
     }

@@ -1,7 +1,6 @@
-
 .navBar{
     height: 100vh;
-    background-color: pink;
+    background-color: #F9C5D5;
     
 }
 
@@ -32,7 +31,7 @@
 }
 
 .habbit_nav_btn{
-    background-color: #187498;
+    background-color: #3DB2FF;
 }
 
 .month_nav_btn:hover, .week_nav_btn:hover, .habbit_nav_btn:hover{
