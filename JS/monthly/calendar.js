@@ -17,8 +17,6 @@ function makeCalendar(dayObjArray, Year, Month){
     //     dayObjArray[i].style.color = 'gray';
     //     LastMonthDate--;
     // }
-
-    // TODO: 6주까지있는 경우 dayObjArray 대상이 없어서 오류 발생
     let day;
     day = MonthStartDay;
     for(i=1;i<=MonthLastDate;i++){
@@ -44,4 +42,15 @@ function getWeekCountofMonth(Year, Month){
 
     return weekCount;
 }
-export {makeCalendar, getWeekCountofMonth};
+
+function adjustWeekCount(Year, Month, makeCalendarItemBoxFunc){
+    const weekCount = getWeekCountofMonth(Year, Month);
+    if(weekCount == 4){
+        makeCalendarItemBoxFunc(4);
+    }else if(weekCount == 5){
+        makeCalendarItemBoxFunc(5);
+    }else{
+        makeCalendarItemBoxFunc(6);
+    }
+}
+export {makeCalendar, adjustWeekCount};

@@ -1,15 +1,16 @@
-import {makeCalendar} from '../monthly/calendar.js';
+import {makeCalendar, adjustWeekCount} from '../monthly/calendar.js';
 
 // Calendar
 const $year_num_container = document.querySelector('.year_num_container');
 const $year = document.querySelector('.year');
 const $month_btn_container = document.querySelector(".month_btn_container");
-const $date = document.querySelectorAll('.date');
 const today = new Date();
 
 function drawCalendarDate(){
     const Year = $year.innerHTML;
     const Month = $month_btn_container.querySelector('.clicked').innerHTML;
+    adjustWeekCount(Year, parseInt(Month)-1, makeWeekAndDateContainer);
+    const $date = document.querySelectorAll('.date');
     makeCalendar($date, Year, parseInt(Month)-1);
 }
 function yearUpDown(event){
@@ -42,8 +43,40 @@ $month_btn_container.addEventListener('click', (event)=>{
     handleSideBarClick(event, $month_btn_container);
     drawCalendarDate();
 })
+
 // Calendar - habbit
 const $habbit_calendar = document.querySelector('.habbit_calendar');
+
+function makeWeekAndDateContainer(weekNum){
+    $habbit_calendar.style.gridTemplateRows = `5rem repeat(${weekNum}, 1fr)`;
+    $habbit_calendar.innerHTML = `
+    <div class="weekTitle">
+        <div class="day">SUN</div>
+        <div class="day">MON</div>
+        <div class="day">TUE</div>
+        <div class="day">WED</div>
+        <div class="day">THU</div>
+        <div class="day">FRI</div>
+        <div class="day">SAT</div>
+    </div>`;
+    let i;
+    let newContainer;
+    for(i=1; i<=weekNum;i++){
+        newContainer = document.createElement('div');
+        newContainer.classList.add('weekRow');
+        $habbit_calendar.appendChild(newContainer);
+        newContainer.innerHTML =  `
+            <div class="date"></div>
+            <div class="date"></div>
+            <div class="date"></div>
+            <div class="date"></div>
+            <div class="date"></div>
+            <div class="date"></div>
+            <div class="date"></div>        
+        `
+    }
+}
+
 $habbit_calendar.addEventListener('click', (event)=>{
     const target = event.target;
     if(!target.classList.contains('date')) return;
@@ -81,6 +114,7 @@ $habbit_result_title.addEventListener('click', (event)=>{
     }
     $habbit_result_title.classList.toggle('graph');
 })
+
 // Achievement graph
 const $achievement_bggraph = document.querySelector('.achievement_bggraph');
 const $achievement_graph_fill = document.querySelector('.achievement_graph_fill');
@@ -106,3 +140,4 @@ window.addEventListener('load', (event)=>{
     $habbit_calendar.classList.add('show');
     $chart_container.classList.add('hidden');
 })
+

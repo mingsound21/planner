@@ -1,4 +1,4 @@
-import {makeCalendar, getWeekCountofMonth} from './calendar.js';
+import {makeCalendar, adjustWeekCount} from './calendar.js';
 
 
 
@@ -32,7 +32,7 @@ function setToToday(){
     $year_header_container.children[1].innerHTML = Year;
     $month_header_container.children[1].innerHTML = Month + 1;
 
-    adjustWeekCount();
+    adjustWeekCount(yearControl.current_page_Year, yearControl.current_page_Month-1, makeWeekAndDayContainer);
     const $day_nums = document.querySelectorAll(".day_num");
     makeCalendar($day_nums, Year, Month);
 
@@ -120,24 +120,11 @@ function makeWeekAndDayContainer(weekNum){
     }
 }
 
-function adjustWeekCount(){
-    const weekCount = getWeekCountofMonth(yearControl.current_page_Year, yearControl.current_page_Month-1);
-    if(weekCount == 4){
-        makeWeekAndDayContainer(4);
-    }else if(weekCount == 5){
-        makeWeekAndDayContainer(5);
-    }else{
-        makeWeekAndDayContainer(6);
-    }
-
-}
-
-
 const yearControl = new headerControl($year_header_container, $month_header_container);
 
 $month_header_container.addEventListener('click', (event)=>{
     if(event.target.dataset.action){
-        adjustWeekCount();
+        adjustWeekCount(yearControl.current_page_Year, yearControl.current_page_Month-1, makeWeekAndDayContainer);
         const $day_nums = document.querySelectorAll(".day_num");
         makeCalendar($day_nums, yearControl.current_page_Year, yearControl.current_page_Month-1);
         dot_today(yearControl.current_page_Year, yearControl.current_page_Month);
@@ -146,7 +133,7 @@ $month_header_container.addEventListener('click', (event)=>{
 
 $year_header_container.addEventListener('click', (event)=>{
     if(event.target.dataset.action){
-        adjustWeekCount();
+        adjustWeekCount(yearControl.current_page_Year, yearControl.current_page_Month-1, makeWeekAndDayContainer);
         const $day_nums = document.querySelectorAll(".day_num");
         makeCalendar($day_nums, yearControl.current_page_Year, yearControl.current_page_Month-1);
         dot_today(yearControl.current_page_Year, yearControl.current_page_Month);
