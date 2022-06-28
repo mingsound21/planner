@@ -74,12 +74,8 @@
     border-bottom: none;
 }
 
-input[type="checkbox"]{
-    display: none;
-}
 
-label[for="todo_checkbox2"]{
-    display: block;
+.todo_checkbox{
     position: relative;
     border: 0.25rem solid black;
     border-radius: 50%;
@@ -88,7 +84,7 @@ label[for="todo_checkbox2"]{
     margin-right: 1rem;
 }
 
-input[type="checkbox"] + label:hover{
+.todo_checkbox:hover{
     cursor: pointer;
     border: 0.25rem solid transparent;
 }
@@ -110,15 +106,13 @@ input[type="checkbox"] + label:hover{
     font-size: 3.3rem;
     bottom: -0.2rem;
     left: -0.4rem;
+    color:transparent;
 }
 
-.hidden{
-    display: none;
+.fa-check:hover{
+    color: black;
 }
 
-.visibie{
-    display: block;
-}
 
 /* TODO: todo item 클릭시 체크박스에 표시 되고, 지운 막대는 js로 구현하기
 TODO: todo를 완료했을시 1) 삭제 2) 밑줄표시는 선택으로 나중에 구현 */

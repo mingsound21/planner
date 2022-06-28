@@ -1,7 +1,5 @@
 import {makeCalendar, adjustWeekCount} from './calendar.js';
 
-
-
 const $month_header_container = document.querySelector('.month_container');
 const $year_header_container = document.querySelector('.year_container');
 const $calendar_container = document.querySelector('.calendar');

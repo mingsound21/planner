@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="../CSS/navBar.css">
 
     <!-- JS -->
-    <script defer src="../JS/weekly/weekly.js"></script>
+    <script defer src="../JS/weekly/weekly.js" type = 'module'></script>
     <!-- Icon -->
     <script src="https://kit.fontawesome.com/99cf562452.js" crossorigin="anonymous"></script>
     
@@ -46,11 +46,6 @@
             </h1>
             
             <div class="weeks_btn_container">
-                <button class="weeks_btn"><span>1</span></button>
-                <button class="weeks_btn"><span>2</span></button>
-                <button class="weeks_btn"><span>3</span></button>
-                <button class="weeks_btn"><span>4</span></button>
-                <button class="weeks_btn"><span>5</span></button>
             </div>
         </header>
     
@@ -60,29 +55,13 @@
                     <span class="day">
                         SUN
                     </span>
-                    <span class="week_day_num">
-                    </span>
+                    <span class="week_day_num"></span>
                 </div>
                 <div class="todo_container">
                     <button class="add_todo_btn">
                         <i class="far fa-plus-square"></i>
                         <span>add to do</span>
                     </button>
-                    <div class="todo_item_container">
-                        <input type="checkbox" id="todo_checkbox2">
-                        <label for="todo_checkbox2">
-                            <i class="fa-solid fa-check hidden"></i>
-                        </label>
-                        <input type="text" class="todo_item">
-                    </div>
-    
-                    <div class="todo_item_container">
-                        <input type="checkbox" id="todo_checkbox2">
-                        <label for="todo_checkbox2">
-                            <i class="fa-solid fa-check"></i>
-                        </label>
-                        <input type="text" class="todo_item">
-                    </div>
                 </div>
             </div>
             <div class="week_day_container">
@@ -97,7 +76,6 @@
                         <i class="far fa-plus-square"></i>
                         <span>add to do</span>
                     </button>
-                    <div class="todo_item_container"></div>
                 </div>
             </div>
                 <div class="week_day_container">
@@ -112,7 +90,12 @@
                         <i class="far fa-plus-square"></i>
                         <span>add to do</span>
                     </button>
-                    <div class="todo_item_container"></div>
+                    <!-- <div class="todo_item_container">
+                        <div class="todo_checkbox">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                        <input type="text" placeholder="할 일 입력" class="todo_item">
+                    </div> -->
                 </div>
             </div>
                 <div class="week_day_container">
@@ -127,7 +110,6 @@
                         <i class="far fa-plus-square"></i>
                         <span>add to do</span>
                     </button>
-                    <div class="todo_item_container"></div>
                 </div>
             </div>
                 <div class="week_day_container">
@@ -142,7 +124,6 @@
                         <i class="far fa-plus-square"></i>
                         <span>add to do</span>
                     </button>
-                    <div class="todo_item_container"></div>
                 </div>
             </div>
                 <div class="week_day_container">
@@ -157,7 +138,6 @@
                         <i class="far fa-plus-square"></i>
                         <span>add to do</span>
                     </button>
-                    <div class="todo_item_container"></div>
                 </div>
             </div>
                 <div class="week_day_container">
@@ -172,7 +152,6 @@
                         <i class="far fa-plus-square"></i>
                         <span>add to do</span>
                     </button>
-                    <div class="todo_item_container"></div>
                 </div>
             </div>
         </main>

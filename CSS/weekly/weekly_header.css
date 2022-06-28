@@ -29,7 +29,6 @@ body{
 
 .weeks_btn_container{
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
     align-items: center;
     justify-items: center;
     padding-right: 10rem;
@@ -68,11 +67,15 @@ body{
 
 @media screen and (max-width:1800px) {
     .weekly_header{
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(5, 1fr);
     }
 
     .week_title{
-        grid-column: 2/4;
+        grid-column: 3/4;
+    }
+    .weeks_btn_container{
+        margin-left: 12rem;
+        grid-column: 4/6;
     }
 }
 
