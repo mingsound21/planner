@@ -15,10 +15,10 @@ TODO: schedule모두 작성한뒤에 enter 또는 submit 버튼 클릭시 스케
 .add_schedule_container{
     background-color: #E3FCBF;
     position: absolute;
-    top: 25rem;
-    left: 50rem;
-    width: 80rem;
-    height: 60rem;
+    top: 15vh;
+    left: 35vw;
+    width: 40vw;
+    height: 60vh;
     display: grid;
     grid-template-columns: 15rem auto;
     grid-template-rows: repeat(3, 1fr);
@@ -116,9 +116,26 @@ textarea{
     background-color: pink;
 }
 
-@media screen and (max-width:1800px) {
+@media (max-width:400px) {
     .add_schedule_container{
-        top: 10rem;
-        left: 55rem;
+        background-color: #E3FCBF;
+        position: absolute;
+        top: 10vh;
+        left: 5vw;
+        width: 90vw;
+        height: 45vh;
+        display: grid;
+        grid-template-columns: 15rem auto;
+        grid-template-rows: repeat(3, 1fr);
+        padding: 4rem;
+        align-items: center;
+        border: 0.7rem solid black;
+        transition: opacity .5s ease-in-out;
+    }
+    input[type = 'color']{
+        width: 15rem;
+        height: 6rem;
+        background-color: transparent;
+        border: none;
     }
 }

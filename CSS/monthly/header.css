@@ -1,6 +1,5 @@
 .monthly_header{
     height: 15vh;
-    width: 100vw;
     position: relative;
 }
 
@@ -59,6 +58,7 @@
     body{
         display: grid;
         grid-template-rows: 5vh auto;
+        height: 130vh;
     }
     .year_container{
         top: 1.5rem;
