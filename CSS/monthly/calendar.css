@@ -9,7 +9,7 @@
 
 .week, .weekTitle{
     display: grid;
-    grid-template-columns: 10rem repeat(7, 1fr);
+    grid-template-columns: 0.7fr repeat(7, 1fr);
     align-items: stretch;
 }
 
@@ -91,7 +91,7 @@
 
 @media screen and (max-width:1800px) {
     .dayOfWeek{
-        font-size: 3.5rem;
+        font-size: 3rem;
     }
     .calendar{
         margin: 2.5rem 5rem 1rem 5rem;

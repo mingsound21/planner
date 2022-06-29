@@ -90,7 +90,7 @@ function makeWeekAndDayContainer(weekNum){
     $calendar_container.style.gridTemplateRows = `0.5fr repeat(${weekNum}, 1fr)`;
     $calendar_container.innerHTML = `
         <div class="weekTitle">
-            <button class="week_btn">week</button>
+            <button class="week_btn"></button>
             <div class="days"><span class="dayOfWeek">SUN</span></div>
             <div class="days"><span class="dayOfWeek">MON</span></div>
             <div class="days"><span class="dayOfWeek">TUE</span></div>

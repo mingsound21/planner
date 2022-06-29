@@ -14,7 +14,6 @@ time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
 }
@@ -58,4 +57,14 @@ a{
 
 html{
 	font-size: 62.5%;
+}
+@media (max-width:500px) {
+	html{
+		font-size: 40%;
+	}
+}
+@media (max-width:400px){
+    html{
+		font-size: 30%;
+	}
 }

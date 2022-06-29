@@ -1,14 +1,9 @@
-body{
-    display: grid;
-    grid-template-columns: 5vw 95vw;
-    grid-template-rows: auto;
-}
-
 .monthly_header{
     height: 15vh;
-    width: 100%;
+    width: 100vw;
     position: relative;
 }
+
 .year_container{
     display: flex;
     align-items: center;
@@ -60,6 +55,25 @@ body{
     color: #EB5353;
     transform: scale(1.1);
 }
-@media screen and (max-width:1800px) {
-    
+@media (max-width:500px){
+    body{
+        display: grid;
+        grid-template-rows: 5vh auto;
+    }
+    .year_container{
+        top: 1.5rem;
+        left: 4rem;
+    }
+    .year{
+        font-size: 2.5rem;
+    }
+    .month{
+        font-size: 6rem;
+    }
+}
+@media (min-width:501px) {
+    body{
+        display: grid;
+        grid-template-columns: 5vw auto;
+    }
 }
