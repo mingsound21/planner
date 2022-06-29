@@ -1,7 +1,6 @@
 .navBar{
     height: 100vh;
     background-color: #F9C5D5;
-    
 }
 
 .nav_btn_container{
@@ -9,7 +8,7 @@
     flex-direction: column;
     align-items: flex-end;
 }
-
+/* 
 .nav_btn_item{
     writing-mode: vertical-lr;
     font-family: 'Permanent Marker', cursive;
@@ -20,7 +19,7 @@
     border-top-right-radius: 0.5rem;
     border-bottom-right-radius: 0.5rem;
     transition: padding-left 0.3s ease-in-out;
-}
+} */
 
 .month_nav_btn{
     background-color: #EB5353;
@@ -33,8 +32,46 @@
 .habbit_nav_btn{
     background-color: #3DB2FF;
 }
-
-.month_nav_btn:hover, .week_nav_btn:hover, .habbit_nav_btn:hover{
-    padding-left: 3rem;
+/* .fa-bars{
+    display: none;
+} */
+@media (max-width:400px) {
+    .navBar{
+        height: 5vh;
+        width: 100vh;
+        background-color: paleturquoise;
+        padding-top: 3rem;
+        padding-left: 5rem;
+    }
+    .nav_btn_container{
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    .nav_btn_item{
+        font-family: 'Permanent Marker', cursive;
+        font-size: 2.4rem;
+        border-top-left-radius: 0.5rem;
+        border-top-right-radius: 0.5rem;
+        padding: 0.8rem 1rem;
+        margin: 0 1rem;
+    }
+    /* .fa-bars{
+        font-size: 2.4rem;
+    } */
 }
-
+@media (min-width:401px) {
+    .month_nav_btn:hover, .week_nav_btn:hover, .habbit_nav_btn:hover{
+        padding-left: 3rem;
+    }
+    .nav_btn_item{
+        writing-mode: vertical-lr;
+        font-family: 'Permanent Marker', cursive;
+        font-size: 2.4rem;
+        transform: rotate(180deg);
+        padding: 0.8rem 1rem;
+        margin: 1rem 0;
+        border-top-right-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
+        transition: padding-left 0.3s ease-in-out;
+    }
+}

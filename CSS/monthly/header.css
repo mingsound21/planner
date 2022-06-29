@@ -60,6 +60,13 @@ body{
     color: #EB5353;
     transform: scale(1.1);
 }
-@media screen and (max-width:1800px) {
-    
+
+@media (max-width:400px) {
+    body{
+        grid-template-columns: auto;
+        grid-template-rows: 5vh auto;
+    }
+    main{
+        background-color: white;
+    }
 }
