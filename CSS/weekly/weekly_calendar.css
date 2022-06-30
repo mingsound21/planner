@@ -90,10 +90,10 @@
 /* TODO: todo item 클릭시 체크박스에 표시 되고, 지운 막대는 js로 구현하기
 TODO: todo를 완료했을시 1) 삭제 2) 밑줄표시는 선택으로 나중에 구현 */
 
-@media (max-width:400px) {
+@media (max-width:500px) {
     .week_calendar{
         grid-template-rows: repeat(7, 1fr);
-        margin: 1rem 4rem;
+        margin: 0 4rem;
     }
     .week_day_container{
         grid-template-columns: 0.5fr 1.5fr;
