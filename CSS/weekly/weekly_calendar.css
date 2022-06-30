@@ -96,7 +96,7 @@ TODO: todo를 완료했을시 1) 삭제 2) 밑줄표시는 선택으로 나중�
         margin: 0 4rem;
     }
     .week_day_container{
-        grid-template-columns: 0.5fr 1.5fr;
+        grid-template-columns: 0.8fr 1.5fr;
     }
     .week_day_title{
         background-color: #A2D2FF;

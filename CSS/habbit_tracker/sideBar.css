@@ -158,7 +158,7 @@
         height: 150vh;
         display: grid;
         grid-template-columns: auto;   
-        grid-template-rows: 8vh 85vh auto;
+        grid-template-rows: 5vh 85vh auto;
     }
     .side_section{
         width: 100vw;
